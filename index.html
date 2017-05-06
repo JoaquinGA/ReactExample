@@ -20,7 +20,6 @@
           }, `Hola ${name}`);
         }
 
-
         const hola = React.createElement(Hola,{
           name: 'Joaquin'
         });
@@ -28,6 +27,17 @@
         ReactDOM.render(
           hola,
           document.getElementById('app')
+        );
+
+
+        setTimeout(
+          ()=>{
+            ReactDOM.render(
+              React.createElement(Hola,{name:'Joaquin Gomez'}),
+              document.getElementById('app')
+            );
+          },
+          1000
         );
     </script>
   </body>
