@@ -5,9 +5,30 @@
     <title>Prueba React</title>
   </head>
   <body>
+<main id="app">
 
+</main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
+    <script type="text/javascript">
+        function Hola(props){
+          const name = props.name;
+
+          return React.DOM.h1({
+            id:'Title'
+          }, `Hola ${name}`);
+        }
+
+
+        const hola = React.createElement(Hola,{
+          name: 'Joaquin'
+        });
+
+        ReactDOM.render(
+          hola,
+          document.getElementById('app')
+        );
+    </script>
   </body>
 </html>
